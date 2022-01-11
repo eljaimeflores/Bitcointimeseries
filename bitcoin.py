@@ -6,11 +6,12 @@ import matplotlib.cbook as cbook
 from matplotlib import dates as mpl_dates
 
 # import Data from files
+bit_2017 = pd.read_csv(r"Bitcoin_2017.csv")
 bit_2018 = pd.read_csv(r"Bitcoin_2018.csv")
 bit_2019 = pd.read_csv(r"Bitcoin_2019.csv")
 bit_2020 = pd.read_csv(r"Bitcoin_2020.csv")
 bit_2021 = pd.read_csv(r"Bitcoin_2021.csv")
-all_bitcoin = [bit_2018, bit_2019, bit_2020, bit_2021]
+all_bitcoin = [bit_2017,bit_2018, bit_2019, bit_2020, bit_2021]
 bit_df = pd.concat(all_bitcoin, ignore_index=True)
 
 # All datatypes from the file are being recognized as objects. This needs to be changed to integers
